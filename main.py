@@ -4,6 +4,7 @@ import random
 import time
 import threading
 
+#note put the music name on the database
 conn = sqlite3.connect('music.db')
 
 def playlist(random_id):
@@ -30,8 +31,8 @@ def play():
     if not filename:
         print("Skipping playback due to error.")
         return
-
-    full_path = "/home/mathduck/Music/music/" + filename
+    #put here the file path of your music folder""
+    full_path = "" + filename
     pygame.mixer.music.load(full_path)
     pygame.mixer.music.play()
 
